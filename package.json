@@ -2,6 +2,14 @@
   "name": "sigmo",
   "private": true,
   "version": "0.1.0",
+  "description": "Javascript SDK for Sigmo analytics",
+  "license": "MIT",
+  "author": "Agus Putra Dana",
+  "homepage": "https://github.com/aguspdana/sigmo-js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aguspdana/sigmo-js.git"
+  },
   "type": "module",
   "scripts": {
     "build": "tsup ./src/index.ts",
