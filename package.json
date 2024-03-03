@@ -1,6 +1,6 @@
 {
   "name": "sigmo",
-  "private": true,
+  "private": false,
   "version": "0.1.0",
   "description": "Javascript SDK for Sigmo analytics",
   "license": "MIT",
