@@ -42,7 +42,7 @@ export class Sigmo {
         this.groupId = id;
     }
 
-    private async send(url: string, data: Record<string, any>): Promise<number | null> {
+    private async send(url: string, data: Record<string, any>): Promise<string | null> {
         const res = await fetch(url, {
             method: "POST",
             keepalive: true,
@@ -53,7 +53,7 @@ export class Sigmo {
             body: JSON.stringify(data),
         });
         if (res.ok) {
-            const { id } = await res.json() as { id: number };
+            const { id } = await res.json() as { id: string };
             return id;
         }
         return null;
@@ -71,7 +71,7 @@ export function trackPageView(analytics: Sigmo, obfuscatedPaths?: string[]) {
         return;
     }
 
-    const event = "[view page]";
+    const event = "_view_page";
     let props: PageViewProps;
     let visibilityStart = Date.now();
     let update: ((props: PageViewProps) => void) | undefined;
